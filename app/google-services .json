@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "289406239387",
+    "firebase_url": "https://financeapp-36829-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "financeapp-36829",
+    "storage_bucket": "financeapp-36829.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289406239387:android:66a3d202a13242e09afc3e",
+        "android_client_info": {
+          "package_name": "com.example.myfinanceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEOSF4VaAPEAuAi4dQgduT8wzuCmNIAOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
