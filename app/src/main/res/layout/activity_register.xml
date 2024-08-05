@@ -15,8 +15,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp" />
-
+            android:layout_margin="16dp" android:layout_marginTop="76dp"/>
     <EditText
             android:id="@+id/edtSurname"
             android:layout_width="0dp"
@@ -25,27 +24,17 @@
             app:layout_constraintTop_toBottomOf="@id/edtName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp" />
-
-    <EditText
-            android:id="@+id/edtAccountNumber"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Account Number"
-            app:layout_constraintTop_toBottomOf="@id/edtSurname"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp" android:layout_marginTop="16dp"/>
 
     <EditText
             android:id="@+id/edtEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Email"
-            app:layout_constraintTop_toBottomOf="@id/edtAccountNumber"
+            app:layout_constraintTop_toBottomOf="@id/edtSurname"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp" tools:layout_editor_absoluteY="199dp"/>
 
     <EditText
             android:id="@+id/edtPhoneNumber"

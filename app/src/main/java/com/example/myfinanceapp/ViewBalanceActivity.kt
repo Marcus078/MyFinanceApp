@@ -1,7 +1,6 @@
 package com.example.myfinanceapp
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 
 class ViewBalanceActivity : TransactionActivity() {
@@ -13,12 +12,5 @@ class ViewBalanceActivity : TransactionActivity() {
 
         txtBalance = findViewById(R.id.txtBalance)
         displayCurrentBalance(txtBalance)
-
-        /*
-        val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
-        val currentBalance = sharedPreferences.getFloat("balance", 0.0f).toDouble()
-        txtBalance.text = "Current Balance: R$currentBalance"
-        */
-
     }
 }

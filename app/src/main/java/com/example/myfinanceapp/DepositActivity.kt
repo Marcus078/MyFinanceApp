@@ -5,37 +5,42 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
- class DepositActivity : TransactionActivity() {
-     private lateinit var edtAmount: EditText
-     private lateinit var btnSubmitDeposit: Button
-     private lateinit var txtBalance:TextView
 
-     override fun onCreate(savedInstanceState: Bundle?) {
-         super.onCreate(savedInstanceState)
-         setContentView(R.layout.activity_deposit)
+class DepositActivity : TransactionActivity() {
+    private lateinit var edtAmount: EditText
+    private lateinit var btnSubmitDeposit: Button
+    private lateinit var txtBalance: TextView
 
-         edtAmount = findViewById(R.id.edtAmount)
-         btnSubmitDeposit = findViewById(R.id.btnSubmitDeposit)
-         txtBalance = findViewById(R.id.txtBalance)
-         displayCurrentBalance(txtBalance)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_deposit)
 
-         btnSubmitDeposit.setOnClickListener {
-             val amountString = edtAmount.text.toString()
-             if (amountString.isNotEmpty()) {
-                 try {
-                     val amount = amountString.toDouble()
-                     updateBalance(amount, true)
-                     saveTransaction("Deposit", amount)
-                     finish()
-                 } catch (e: NumberFormatException) {
-                     Toast.makeText(this, "Invalid amount", Toast.LENGTH_SHORT).show()
-                 }
-             } else {
-                 Toast.makeText(this, "Enter amount", Toast.LENGTH_SHORT).show()
-             }
-         }
-     }
- }
+        edtAmount = findViewById(R.id.edtAmount)
+        btnSubmitDeposit = findViewById(R.id.btnSubmitDeposit)
+        txtBalance = findViewById(R.id.txtBalance)
+
+        displayCurrentBalance(txtBalance)
+
+        btnSubmitDeposit.setOnClickListener {
+            val amountString = edtAmount.text.toString()
+            if (amountString.isNotEmpty()) {
+                try {
+                    val amount = amountString.toDouble()
+                    updateBalance(amount, true)
+                    saveTransaction("Deposit", amount)
+                    Toast.makeText(this, "Deposit: R$amount", Toast.LENGTH_SHORT).show()
+                    finish()
+                } catch (e: NumberFormatException) {
+                    Toast.makeText(this, "Invalid amount", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Enter amount", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
+
+
 /*
 class DepositActivity : AppCompatActivity() {
     private lateinit var edtAmount: EditText
