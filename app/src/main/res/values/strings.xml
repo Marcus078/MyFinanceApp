@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My finance app</string>
+    <string name="balance">Check Balance</string>
 </resources>
