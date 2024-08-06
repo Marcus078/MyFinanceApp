@@ -10,159 +10,272 @@
 
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtUserInfo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="150dp"/>
+        android:id="@+id/txtUserInfo"
+        android:layout_width="144dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cvBalance2"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="200dp"
-            android:layout_height="130dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintStart_toEndOf="@id/cvBalance"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.5" >
+        android:id="@+id/cvBalance2"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cvBalance"
+        app:layout_constraintTop_toBottomOf="@+id/cvTrans"
+        app:layout_constraintWidth_percent="0.5">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <ImageView
-                    android:id="@+id/img2"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:contentDescription="@string/deposit"
-                    android:src="@drawable/deposit"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/txtTransfer"
-                    android:layout_marginTop="16dp"/>
+                android:id="@+id/img2"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/deposit"
+                android:src="@drawable/deposit"
+                app:layout_constraintBottom_toTopOf="@id/txtTransfer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                    android:id="@+id/txtTransfer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/deposit"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/img2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"/>
+                android:id="@+id/txtTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/deposit"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cvBalance"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="200dp"
-            android:layout_height="130dp"
-            android:layout_margin="3dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/cvBalance2"
-            app:layout_constraintWidth_percent="0.5"
-            android:layout_marginTop="156dp">
+        android:id="@+id/cvTrans"
+        android:layout_width="189dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="2dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserInfo">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
-                    android:id="@+id/img"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:contentDescription="@string/balance"
-                    android:src="@drawable/balance"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/txtBalance"
-                    android:layout_marginTop="16dp"/>
+                android:id="@+id/img4"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Transfer"
+                android:src="@drawable/withdraw"
+                app:layout_constraintBottom_toTopOf="@id/txtTrans"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                    android:id="@+id/txtBalance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/balance"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/img"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"/>
+                android:id="@+id/txtTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Transfer"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvwith"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="14dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvBalance">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Withdraw"
+                android:src="@drawable/withdraw"
+                app:layout_constraintBottom_toTopOf="@id/txtWith"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtWith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Withdraw"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBalance"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_margin="3dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="17dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@+id/cvTrans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserInfo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/balance"
+                android:src="@drawable/balance"
+                app:layout_constraintBottom_toTopOf="@id/txtBalance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/balance"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-    <Button
-            android:text="Transfer"
-            android:layout_width="116dp"
-            android:layout_height="40dp"
-            android:id="@+id/btnTransfer"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="336dp"
-            android:layout_marginStart="176dp"/>
 
     <Button
-            android:text="History"
-            android:layout_width="116dp"
-            android:layout_height="40dp"
-            android:id="@+id/btnViewTransactions"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="396dp"
-            android:layout_marginStart="36dp"/>
+        android:id="@+id/btnTransfer"
+        android:layout_width="116dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="496dp"
+        android:text="Transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-            android:text="Balance"
-            android:layout_width="116dp"
-            android:layout_height="40dp"
-            android:id="@+id/btnViewBalance"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="396dp"
-            android:layout_marginStart="292dp"/>
+        android:id="@+id/btnViewTransactions"
+        android:layout_width="116dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="672dp"
+        android:text="History"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Deposit"
-            android:id="@+id/btnDeposit"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="336dp"
-            android:layout_marginStart="36dp"/>
+        android:id="@+id/btnViewBalance"
+        android:layout_width="116dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="560dp"
+        android:text="Balance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-            android:text="Withdraw"
-            android:layout_width="115dp"
-            android:layout_height="49dp"
-            android:id="@+id/btnWithdraw"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="396dp"
-            android:layout_marginStart="176dp"/>
+        android:id="@+id/btnDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="552dp"
+        android:text="Deposit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="115dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="620dp"
+        android:text="Withdraw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
