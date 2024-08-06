@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : TransactionActivity() {
@@ -13,6 +14,9 @@ class MainActivity : TransactionActivity() {
     private lateinit var btnViewTransactions: Button
     private lateinit var btnViewBalance: Button
     private lateinit var txtUserInfo: TextView
+    private lateinit var cvBalance: CardView
+    private lateinit var cvBalance2: CardView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,21 +28,40 @@ class MainActivity : TransactionActivity() {
         btnViewTransactions = findViewById(R.id.btnViewTransactions)
         btnViewBalance = findViewById(R.id.btnViewBalance)
         txtUserInfo = findViewById(R.id.txtUserInfo)
+        cvBalance = findViewById(R.id.cvBalance)
+        cvBalance2 = findViewById(R.id.cvBalance2)
+
+
 
         accountNumber = intent.getStringExtra("ACCOUNT_NUMBER") ?: ""
-        displayUserInfo(txtUserInfo)  // Correct method call
+        displayUserInfo(txtUserInfo)
+        // Correct method call
+        cvBalance.setOnClickListener{
+            val intent = Intent(this, ViewBalanceActivity::class.java)
+            intent.putExtra("ACCOUNT_NUMBER", accountNumber)
+            startActivity(intent)
+        }
+
+        cvBalance2.setOnClickListener{
+            val intent = Intent(this, TransferActivity::class.java)
+            intent.putExtra("ACCOUNT_NUMBER", accountNumber)
+            startActivity(intent)
+        }
+
 
         btnDeposit.setOnClickListener {
             val intent = Intent(this, DepositActivity::class.java)
             intent.putExtra("ACCOUNT_NUMBER", accountNumber)
             startActivity(intent)
         }
-
+/*
         btnTransfer.setOnClickListener {
             val intent = Intent(this, TransferActivity::class.java)
             intent.putExtra("ACCOUNT_NUMBER", accountNumber)
             startActivity(intent)
         }
+
+ */
 
         btnWithdraw.setOnClickListener {
             val intent = Intent(this, WithdrawActivity::class.java)
@@ -51,11 +74,13 @@ class MainActivity : TransactionActivity() {
             intent.putExtra("ACCOUNT_NUMBER", accountNumber)
             startActivity(intent)
         }
-
+/*
         btnViewBalance.setOnClickListener {
             val intent = Intent(this, ViewBalanceActivity::class.java)
             intent.putExtra("ACCOUNT_NUMBER", accountNumber)
             startActivity(intent)
         }
+        */
+
     }
 }
