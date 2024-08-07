@@ -11,19 +11,21 @@
 
     <TextView
         android:id="@+id/txtUserInfo"
-        android:layout_width="144dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="271dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvBalance2"
+        android:id="@+id/cvDeposit"
         android:layout_width="200dp"
         android:layout_height="130dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/white"
@@ -33,8 +35,6 @@
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/cvBalance"
         app:layout_constraintTop_toBottomOf="@+id/cvTrans"
         app:layout_constraintWidth_percent="0.5">
 
@@ -75,9 +75,8 @@
         android:id="@+id/cvTrans"
         android:layout_width="189dp"
         android:layout_height="129dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/white"
@@ -87,8 +86,6 @@
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUserInfo">
 
 
@@ -129,7 +126,7 @@
         android:layout_width="200dp"
         android:layout_height="130dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="16dp"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/white"
@@ -179,9 +176,7 @@
         android:layout_width="200dp"
         android:layout_height="130dp"
         android:layout_margin="3dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginStart="4dp"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/white"
@@ -190,9 +185,8 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toStartOf="@+id/cvTrans"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserInfo">
+        tools:layout_editor_absoluteY="331dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -228,52 +222,12 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btnTransfer"
-        android:layout_width="116dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="496dp"
-        android:text="Transfer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/btnViewTransactions"
         android:layout_width="116dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="672dp"
         android:text="History"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnViewBalance"
-        android:layout_width="116dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="560dp"
-        android:text="Balance"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDeposit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="552dp"
-        android:text="Deposit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnWithdraw"
-        android:layout_width="115dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="620dp"
-        android:text="Withdraw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
