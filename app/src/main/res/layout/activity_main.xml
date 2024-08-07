@@ -75,7 +75,7 @@
         android:id="@+id/cvTrans"
         android:layout_width="189dp"
         android:layout_height="129dp"
-        android:layout_marginTop="179dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
@@ -177,6 +177,7 @@
         android:layout_height="130dp"
         android:layout_margin="3dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="178dp"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/white"
@@ -186,7 +187,7 @@
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="331dp">
+        app:layout_constraintTop_toBottomOf="@+id/txtUserInfo">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
