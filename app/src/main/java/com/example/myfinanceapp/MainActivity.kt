@@ -9,11 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 
 class MainActivity : TransactionActivity() {
-    private lateinit var btnDeposit: Button
-    private lateinit var btnTransfer: Button
-    private lateinit var btnWithdraw: Button
-    private lateinit var btnViewTransactions: Button
-    private lateinit var btnViewBalance: Button
+
     private lateinit var txtUserInfo: TextView
 
     //card view variable declaration
@@ -27,6 +23,7 @@ class MainActivity : TransactionActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         //Card view link with IDs
          cvDeposit = findViewById(R.id.cvDeposit)
         cvTransfer = findViewById(R.id.cvTrans)
@@ -34,11 +31,7 @@ class MainActivity : TransactionActivity() {
         cvVieTrans = findViewById(R.id.cvHist)
         cvBalance = findViewById(R.id.cvBalance)
 
-       /* btnDeposit = findViewById(R.id.btnDeposit)
-        btnTransfer = findViewById(R.id.btnTransfer)
-        btnWithdraw = findViewById(R.id.btnWithdraw)
-        btnViewTransactions = findViewById(R.id.btnViewTransactions)
-        btnViewBalance = findViewById(R.id.btnViewBalance)*/
+
         txtUserInfo = findViewById(R.id.txtUserInfo)
 
         accountNumber = intent.getStringExtra("ACCOUNT_NUMBER") ?: ""
