@@ -49,6 +49,7 @@ class RegisterActivity : AppCompatActivity() {
                     putString("$accountNumber-phoneNumber", phoneNumber)
                     putString("$accountNumber-username", username)
                     putString("$accountNumber-password", password)
+                    putString("$accountNumber-accountNumber", accountNumber)
                     putFloat("$accountNumber-balance", 0.0f) // Initialize balance
                     putString("$accountNumber-transactions", "") // Initialize transactions
                     apply()

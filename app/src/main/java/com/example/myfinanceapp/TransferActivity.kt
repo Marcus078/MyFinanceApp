@@ -24,6 +24,7 @@ class TransferActivity : TransactionActivity() {
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
         displayCurrentBalance(txtCurrentBalance)
 
+
         btnSubmitTransfer.setOnClickListener {
             val amountString = edtAmount.text.toString()
             val recipientAccount = edtRecipientAccount.text.toString()
@@ -32,9 +33,10 @@ class TransferActivity : TransactionActivity() {
                     val amount = amountString.toDouble()
                     if (getCurrentBalance() >= amount) {
                         if (isValidRecipient(recipientAccount)) {
-                            updateBalance(amount, false)
+                            // Update balance and history for recipient
+                            updateBalance(amount, false, recipientAccount)
                             saveTransaction("Transfer", amount)
-                            Toast.makeText(this, "Transfer of R$amount to account $recipientAccount successful", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Transfer of -R$amount to account $recipientAccount successful", Toast.LENGTH_SHORT).show()
                             finish()
                         } else {
                             Toast.makeText(this, "Recipient account does not exist", Toast.LENGTH_SHORT).show()
