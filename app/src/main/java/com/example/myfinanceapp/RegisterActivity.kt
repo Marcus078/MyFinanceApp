@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import java.util.*
 
@@ -19,6 +20,9 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var btnRegister: Button
     private lateinit var sharedPreferences: SharedPreferences
 
+    //Textview declaration
+    private lateinit var tvSignIn:TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -31,6 +35,15 @@ class RegisterActivity : AppCompatActivity() {
         edtPassword = findViewById(R.id.edtPassword)
         btnRegister = findViewById(R.id.btnRegister)
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+
+        //Textview to ID
+        tvSignIn = findViewById(R.id.tvSignIn)
+
+        //method of textview to login
+        tvSignIn.setOnClickListener{
+            val login = Intent(this,LoginActivity::class.java)
+            startActivity(login)
+        }
 
         btnRegister.setOnClickListener {
             val name = edtName.text.toString()
