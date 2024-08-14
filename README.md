@@ -15,5 +15,4 @@ Main Menu:
 The main menu offers various options, including balance check, transfer, withdraw, deposit, and transaction history.
 
 Transfer Feature:
-
 When selecting the transfer option, users can only transfer funds to other registered users within the system. They will need to provide the recipient's account number and the amount to be transferred. After confirming the transfer, the sender's balance will be updated accordingly.
