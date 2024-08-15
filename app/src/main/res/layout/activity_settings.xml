@@ -9,13 +9,119 @@
 
     <Button
         android:id="@+id/btnSettingExit"
-        android:layout_width="103dp"
-        android:layout_height="62dp"
-        android:text="Exit"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="Cancel"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintTop_toBottomOf="@+id/edUpdatePassword" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="256dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Update Profile"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edUpdateName"
+        android:layout_width="212dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Update Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/edUpdateSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Update Surname"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edUpdateName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edUpdateName"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdateName" />
+
+    <EditText
+        android:id="@+id/edUpdateEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Update Email"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edUpdateSurname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edUpdateSurname"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdateSurname" />
+
+    <EditText
+        android:id="@+id/edUpdateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Update Number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edUpdateEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edUpdateEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdateEmail" />
+
+    <EditText
+        android:id="@+id/edUpdateUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Update Username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edUpdateNumber"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edUpdateNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdateNumber" />
+
+    <EditText
+        android:id="@+id/edUpdatePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Update Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edUpdateUsername"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edUpdateUsername"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdateUsername" />
+
+    <Button
+        android:id="@+id/btnSettingSave"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:text="Save"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSettingExit"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edUpdatePassword" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
