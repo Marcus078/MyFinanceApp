@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -19,6 +20,9 @@ class MainActivity : TransactionActivity() {
     private lateinit var cvVieTrans:CardView
     private lateinit var cvBalance:CardView
 
+    //settings declaration
+    private lateinit var ivSetting:ImageView
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +37,15 @@ class MainActivity : TransactionActivity() {
 
 
         txtUserInfo = findViewById(R.id.txtUserInfo)
+
+        //setting id
+        ivSetting = findViewById(R.id.iv_setting)
+
+        //imageview onclick
+        ivSetting.setOnClickListener {
+            val setting = Intent(this,Settings::class.java)
+            startActivity(setting)
+        }
 
         accountNumber = intent.getStringExtra("ACCOUNT_NUMBER") ?: ""
         displayUserInfo(txtUserInfo)  // Correct method call
