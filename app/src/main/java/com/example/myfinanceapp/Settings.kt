@@ -1,6 +1,7 @@
 package com.example.myfinanceapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -21,6 +22,9 @@ class Settings : AppCompatActivity() {
     private lateinit var edPasswordUpdate:EditText
     private lateinit var btnSaveSetting:Button
 
+    private lateinit var sharedPreferences: SharedPreferences
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -34,6 +38,10 @@ class Settings : AppCompatActivity() {
         edUsernameUpdate = findViewById(R.id.edUpdateUsername)
         edPasswordUpdate = findViewById(R.id.edUpdatePassword)
         btnSaveSetting = findViewById(R.id.btnSettingSave)
+
+        sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+
+
 
         //Onclick method for save button to make update for profile
         btnSaveSetting.setOnClickListener {
