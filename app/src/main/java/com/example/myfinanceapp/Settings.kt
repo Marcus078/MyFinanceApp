@@ -46,6 +46,12 @@ class Settings : AppCompatActivity() {
         //Onclick method for save button to make update for profile
         btnSaveSetting.setOnClickListener {
 
+            edNameUpdate.text.clear()
+            edSurnameUpdate.text.clear()
+            edEmailUpdate.text.clear()
+            edNumberUpdate.text.clear()
+            edUsernameUpdate.text.clear()
+            edPasswordUpdate.text.clear()
         }
 
         //Onclick method for exit button

@@ -12,7 +12,7 @@
         android:layout_width="133dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:text="Cancel"
+        android:text="Exit"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.841"
